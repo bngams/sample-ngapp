@@ -16,4 +16,8 @@ export class ProductCardComponent implements OnInit {
   ngOnInit() {
   }
 
+  onToggle(event) {
+    console.log('highlight toggle event', event);
+  }
+
 }
