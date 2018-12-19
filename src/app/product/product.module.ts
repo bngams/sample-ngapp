@@ -6,9 +6,17 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDashboardComponent } from './product-dashboard/product-dashboard.component';
 import { SharedModule } from '../shared/shared.module';
 import { HighlightDirective } from './directives/highlight.directive';
+import { NgxUnlessDirective } from './directives/ngx-unless.directive';
 
 @NgModule({
-  declarations: [ProductCardComponent, ProductFormComponent, ProductListComponent, ProductDashboardComponent, HighlightDirective],
+  declarations: [
+    ProductCardComponent,
+    ProductFormComponent,
+    ProductListComponent,
+    ProductDashboardComponent,
+    HighlightDirective,
+    NgxUnlessDirective
+  ],
   imports: [
     CommonModule,
     SharedModule
