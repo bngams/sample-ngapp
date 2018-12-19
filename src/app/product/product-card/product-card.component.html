@@ -1,14 +1,13 @@
-<mat-card class="product-card">
+<mat-card class="product-card" appHighlight>
   <mat-card-header>
-    <mat-card-title>NAME</mat-card-title>
+    <mat-card-title>{{ product.name | uppercase }}</mat-card-title>
     <mat-card-subtitle>
-      PRICE
+      {{ product.price | currency:'EUR' }}
     </mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
     <p>
-      DESC Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-      Nobis quidem magni explicabo porro, doloribus maxime sed atque esse.
+      {{ product.desc | truncate:10 }}
     </p>
   </mat-card-content>
   <mat-card-actions>
