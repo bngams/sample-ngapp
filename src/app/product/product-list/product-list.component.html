@@ -1,5 +1,6 @@
 <div class="container">
   <app-product-card *ngFor="let p of products;" [product]="p">
-
+    <img mat-card-image [src]="p.imgUrl" alt="Photo of {{ p.name }}">
+    <div class="flash">Buy Today!!</div>
   </app-product-card>
 </div>
