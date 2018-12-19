@@ -1,4 +1,4 @@
-<mat-card class="product-card" appHighlight>
+<mat-card class="product-card" [appHighlight]="product.price >= 500">
   <mat-card-header>
     <mat-card-title>{{ product.name | uppercase }}</mat-card-title>
     <mat-card-subtitle>
