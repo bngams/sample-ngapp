@@ -1,0 +1,36 @@
+{
+    "product": [
+        {
+            "id": 1,
+            "category": "tech",
+            "name": "Surface",
+            "price": 500,
+            "imgUrl": "https://imgplaceholder.com/640x480",
+            "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quidem magni explicabo porro"
+        },
+        {
+            "id": 2,
+            "category": "tech",
+            "name": "iMac",
+            "price": 800,
+            "imgUrl": "https://imgplaceholder.com/640x480",
+            "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quidem magni explicabo porro"
+        },
+        {
+            "id": 3,
+            "category": "tech",
+            "name": "Apple iWatch",
+            "price": 300,
+            "imgUrl": "https://imgplaceholder.com/640x480",
+            "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quidem magni explicabo porro"
+        },
+        {
+            "id": 4,
+            "category": "tech",
+            "name": "Google Home",
+            "price": 60,
+            "imgUrl": "https://imgplaceholder.com/640x480",
+            "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quidem magni explicabo porro"
+        }
+    ]
+}
