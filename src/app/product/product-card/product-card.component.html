@@ -1,6 +1,6 @@
-<mat-card class="product-card" [appHighlight]="product.price >= 500" (toggleHighlight)="onToggle($event)">
+<mat-card class="product-card" [appHighlight]="product.price >= 500" (toggleHighlight)="onToggle($event)" #highlighter="hl">
   <mat-card-header>
-    <mat-card-title>{{ product.name | uppercase }}</mat-card-title>
+    <mat-card-title (dblclick)="highlighter.toggle()">{{ product.name | uppercase }}</mat-card-title>
     <mat-card-subtitle>
       {{ product.price | currency:'EUR' }}
     </mat-card-subtitle>
