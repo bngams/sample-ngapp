@@ -7,6 +7,8 @@ import { ProductDashboardComponent } from './product-dashboard/product-dashboard
 import { SharedModule } from '../shared/shared.module';
 import { HighlightDirective } from './directives/highlight.directive';
 import { NgxUnlessDirective } from './directives/ngx-unless.directive';
+import { ProductRoutingModule } from './product-routing.module';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -15,11 +17,13 @@ import { NgxUnlessDirective } from './directives/ngx-unless.directive';
     ProductListComponent,
     ProductDashboardComponent,
     HighlightDirective,
-    NgxUnlessDirective
+    NgxUnlessDirective,
+    ProductDetailComponent
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    ProductRoutingModule
   ],
   exports: [
     ProductDashboardComponent

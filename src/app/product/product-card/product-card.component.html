@@ -1,11 +1,15 @@
-<mat-card class="product-card" [appHighlight]="product.price >= 500" (toggleHighlight)="onToggle($event)" #highlighter="hl">
+<mat-card *ngIf="product" class="product-card" [appHighlight]="product.price >= 500" (toggleHighlight)="onToggle($event)"
+  #highlighter="hl">
   <mat-card-header>
     <mat-card-title (dblclick)="highlighter.toggle()">{{ product.name | uppercase }}</mat-card-title>
     <mat-card-subtitle>
       {{ product.price | currency:'EUR' }}
     </mat-card-subtitle>
   </mat-card-header>
-  <ng-content select="img" #imageContent></ng-content>
+  <ng-content select="img" #imageContent *ngIf="product.imgUrl; else defaultImage"></ng-content>
+  <ng-template #defaultImage>
+    <img mat-card-image src="https://imgplaceholder.com/420x320/d56363" alt="">
+  </ng-template>
   <mat-card-content>
     <p>
       {{ product.desc | truncate:10 }}
