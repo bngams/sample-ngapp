@@ -1,4 +1,6 @@
-export class Product {
+import { Resource } from '../shared/api/resource';
+
+export class Product extends Resource<number> {
 
     constructor(public id: number,
         public name: string,
@@ -6,6 +8,8 @@ export class Product {
         public imgUrl: string,
         public desc: string,
         public category: string,
-        ) { }
+    ) {
+        super();
+    }
 
 }

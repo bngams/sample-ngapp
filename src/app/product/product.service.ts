@@ -3,17 +3,15 @@ import { HttpClient } from '@angular/common/http';
 import { Product } from './product';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { ResourceService } from '../shared/api/resource.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ProductService {
+export class ProductService extends ResourceService<number, Product> {
 
   constructor(private http: HttpClient) {
-  }
-
-  list(): Observable<Product[]> {
-    return this.http.get<Product[]>(environment.apiBaseUrl + '/product');
+    super(http, 'products');
   }
 
 }
