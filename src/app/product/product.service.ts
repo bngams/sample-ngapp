@@ -11,7 +11,7 @@ import { ResourceService } from '../shared/api/resource.service';
 export class ProductService extends ResourceService<number, Product> {
 
   constructor(private http: HttpClient) {
-    super(http, 'products');
+    super(http, 'product');
   }
 
 }

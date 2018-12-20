@@ -1,12 +1,13 @@
-<form>
+<form #myForm="ngForm">
   <mat-form-field>
-    <input matInput placeholder="Name" name="name">
+    <input matInput placeholder="Name" name="name" [(ngModel)]="product.name" minlength="5">
   </mat-form-field>
   <mat-form-field>
-    <input matInput placeholder="Price" name="price">
+    <input matInput placeholder="Price" name="price" #price="ngModel" [(ngModel)]="product.price" required>
   </mat-form-field>
+  <span *ngIf="price?.errors?.required">Mandatory</span>
   <mat-form-field>
-    <input matInput placeholder="Category" name="category">
+    <input matInput placeholder="Category" name="category" [(ngModel)]="product.category" minlength="2">
   </mat-form-field>
-  <button type="button" mat-raised-button color="primary">Add</button>
+  <button [disabled]="!myForm.valid" type="button" mat-raised-button color="primary" (click)="submit()">Add</button>
 </form>

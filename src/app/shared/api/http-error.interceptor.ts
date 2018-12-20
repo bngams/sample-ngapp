@@ -11,6 +11,7 @@ export class HttpErrorInterceptor implements HttpInterceptor {
     handleError(error) {
         // notificationService.error
         window.alert(`Status: ${error.status}; Message: ${error.message}`);
+        // sentry.push(error)
         return throwError(error);
     }
 }

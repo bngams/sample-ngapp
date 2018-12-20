@@ -37,6 +37,7 @@ export class ProductDashboardComponent implements OnInit, AfterViewInit {
 
 
   addProduct(product) {
+    console.log(product);
     this.productList.products.push(product);
   }
 

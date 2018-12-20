@@ -10,6 +10,7 @@ import { ProductDashboardComponent } from './product/product-dashboard/product-d
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { LoginModule } from './login/login.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     BrowserModule,
     BrowserAnimationsModule,
     SharedModule,
+    LoginModule,
     AppRoutingModule
   ],
   providers: [],
