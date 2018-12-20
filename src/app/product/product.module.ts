@@ -9,6 +9,7 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { NgxUnlessDirective } from './directives/ngx-unless.directive';
 import { ProductRoutingModule } from './product-routing.module';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductService } from './product.service';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
   ],
   exports: [
     ProductDashboardComponent
-  ]
+  ],
+  providers: [ProductService]
 })
 export class ProductModule { }
