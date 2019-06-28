@@ -19,7 +19,6 @@ export class LoginFormComponent implements OnInit {
   }
 
   initForm() {
-    // http post
     this.loginForm = new FormGroup({
       email: new FormControl('', [Validators.minLength(5)]),
       password: new FormControl('', [Validators.required]),
@@ -28,6 +27,7 @@ export class LoginFormComponent implements OnInit {
 
   login() {
     console.log(this.loginForm.value);
+    // const credentials: Credentials = this.loginForm.value;
     this.authService.login();
   }
 

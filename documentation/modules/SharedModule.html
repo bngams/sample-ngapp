@@ -241,17 +241,22 @@
 import { MaterialModule } from &#x27;./material.module&#x27;;
 import { TruncatePipe } from &#x27;./pipes/truncate.pipe&#x27;;
 import { ApiModule } from &#x27;./api/api.module&#x27;;
+import { ReactiveFormsModule, FormsModule } from &#x27;@angular/forms&#x27;;
 
 @NgModule({
   declarations: [TruncatePipe],
   imports: [
     MaterialModule,
+    ReactiveFormsModule,
+    FormsModule,
     ApiModule
   ],
   exports: [
     MaterialModule,
     ApiModule,
-    TruncatePipe
+    TruncatePipe,
+    ReactiveFormsModule,
+    FormsModule,
   ]
 })
 export class SharedModule { }

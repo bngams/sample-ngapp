@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class AuthService {
 
   isLoggedIn = false;
+  profile: any;
 
   constructor() { }
 
@@ -15,6 +16,8 @@ export class AuthService {
     // if(this.redirectUrl) {
     //   this.router.navigateTo(this.redirectUrl)
     // }
+    this.profile = { name: 'Boris' };
+    localStorage.setItem('profile', this.profile);
   }
 
   logout() {

@@ -1,3 +1,12 @@
+# Run
+
+git clone ...
+(cd folder)
+npm install
+(npm install -g json-server)
+ng serve
+npm run serve-api
+
 # NgApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.2.

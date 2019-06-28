@@ -10,6 +10,6 @@
   <mat-form-field>
     <input matInput type="password" name="password" formControlName="password">
   </mat-form-field>
-  <span *ngIf="false">Mandatory</span>
-  <button [disabled]="false" type="submit" mat-raised-button color="primary">Login</button>
+  <span *ngIf="loginForm.controls['password'].errors?.required">Mandatory</span>
+  <button [disabled]="!loginForm.valid" type="submit" mat-raised-button color="primary">Login</button>
 </form>

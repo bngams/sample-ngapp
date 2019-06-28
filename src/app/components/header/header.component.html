@@ -5,5 +5,7 @@
   <!-- links -->
   <span class="menu-item" routerLink="/home" routerLinkActive="active">Home</span>
   <span class="menu-item" routerLink="/login" routerLinkActive="active">Login</span>
-  <span class="menu-item" routerLink="/products" routerLinkActive="active">Products</span>
+  <span class="menu-item" routerLink="/products" routerLinkActive="active"
+    *ngIf="authService.isLoggedIn">Products</span>
+  <span *ngIf="authService.isLoggedIn">{{ (getProfile())?.name }}</span>
 </mat-toolbar>

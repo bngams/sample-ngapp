@@ -4,6 +4,7 @@ import { Product } from '../product';
 import { ProductCardComponent } from '../product-card/product-card.component';
 import { ProductService } from '../product.service';
 import { Observable } from 'rxjs';
+import { ProdcutBasicService } from '../prodcut-basic.service';
 
 @Component({
   selector: 'app-product-list',
@@ -15,10 +16,15 @@ export class ProductListComponent implements OnInit, AfterViewInit {
   products: Product[] = new Array();
   products$: Observable<Product[]>;
 
+  // ViewChild
+  // productDetail: ProductDetailComponent
+
   @ViewChildren(ProductCardComponent)
   productsRef: QueryList<ProductCardComponent>;
 
-  constructor(private productService: ProductService) { }
+  constructor(
+    private productService: ProductService,
+    private productBasicService: ProdcutBasicService) { }
 
   ngOnInit() {
     // for async pipe
@@ -27,6 +33,26 @@ export class ProductListComponent implements OnInit, AfterViewInit {
     // this.productService.list().subscribe((data) => {
     //   this.products = data;
     // });
+  }
+
+  loadProducts() {
+    const req: Observable<Product[]> = this.productBasicService.list()  ;
+    // create an Observer
+    const reqObserver = {
+      next: (res: Product[]) => {
+        this.products = res;
+      },
+      error: (err) => { console.log('Error'); },
+      complete: () => { console.log('Completed'); }
+    };
+    // subscribe
+    // this.productBasicService.list().subscribe(reqObserver)
+    req.subscribe(reqObserver);
+
+    // partial observer
+    req.subscribe(res => this.products = res);
+
+    this.products$ = this.productBasicService.list();
   }
 
   ngAfterViewInit() {

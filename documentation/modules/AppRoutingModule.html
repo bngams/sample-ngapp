@@ -75,10 +75,11 @@ import { HomeComponent } from &#x27;./components/home/home.component&#x27;;
 import { ProductDashboardComponent } from &#x27;./product/product-dashboard/product-dashboard.component&#x27;;
 import { PageNotFoundComponent } from &#x27;./components/page-not-found/page-not-found.component&#x27;;
 import { RouterModule, Routes } from &#x27;@angular/router&#x27;;
+import { AuthGuard } from &#x27;./security/guards/auth.guard&#x27;;
 
 const routes: Routes &#x3D; [
   { path: &#x27;home&#x27;, component: HomeComponent },
-  { path: &#x27;products&#x27;, loadChildren: &#x27;./product/product.module#ProductModule&#x27; },
+  { path: &#x27;products&#x27;, canActivate: [AuthGuard], loadChildren: &#x27;./product/product.module#ProductModule&#x27; },
   { path: &#x27;&#x27;, redirectTo: &#x27;/home&#x27;, pathMatch: &#x27;full&#x27; },
   { path: &#x27;**&#x27;, component: PageNotFoundComponent }
 ];

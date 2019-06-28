@@ -15,6 +15,7 @@ describe('ProductService', () => {
       providers: [ProductService]
     }).compileComponents();
     httpSpy = jasmine.createSpyObj('Http', ['get']);
+    productSpy = jasmine.createSpyObj('ProductService', ['list']);
     httpMock = injector.get(HttpTestingController);
   }));
 

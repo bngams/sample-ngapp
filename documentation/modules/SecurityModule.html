@@ -34,7 +34,7 @@
 
 <ol class="breadcrumb">
     <li>Modules</li>
-    <li>ProductRoutingModule</li>
+    <li>SecurityModule</li>
 </ol>
 
 
@@ -54,7 +54,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/product/product-routing.module.ts</code>
+            <code>src/app/security/security.module.ts</code>
         </p>
 
 
@@ -72,24 +72,14 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { CommonModule } from &#x27;@angular/common&#x27;;
-import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
-import { ProductDashboardComponent } from &#x27;./product-dashboard/product-dashboard.component&#x27;;
-import { ProductDetailComponent } from &#x27;./product-detail/product-detail.component&#x27;;
-
-const routes: Routes &#x3D; [
-  { path: &#x27;&#x27;, component: ProductDashboardComponent },
-  { path: &#x27;detail/:id&#x27;, component: ProductDetailComponent },
-];
 
 @NgModule({
+  declarations: [],
   imports: [
-    RouterModule.forChild(routes)
+    CommonModule
   ],
-  exports: [
-    RouterModule
-  ]
 })
-export class ProductRoutingModule { }
+export class SecurityModule { }
 </code></pre>
     </div>
 </div>
@@ -124,7 +114,7 @@ export class ProductRoutingModule { }
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
-            var COMPODOC_CURRENT_PAGE_URL = 'ProductRoutingModule.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'SecurityModule.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "serve-api": "json-server --watch data/db.json --port 3004"
+    "serve-api": "json-server --watch data/db.json --port 3004",
+    "compodoc": "npx compodoc -p src/tsconfig.app.json"
   },
   "private": true,
   "dependencies": {

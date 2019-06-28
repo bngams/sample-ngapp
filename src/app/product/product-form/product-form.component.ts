@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, AfterViewInit, Output, EventEmitter } from '@angular/core';
 import { Product } from '../product';
-import { FormControl } from '@angular/forms';
+import { FormControl, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-product-form',
@@ -32,7 +32,7 @@ export class ProductFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  submit() {
+  submit(valid) {
     this.submitProduct.emit(this.product);
   }
 
